@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import AddCircleIcon from "@mui/icons-material/AddCircle";
 import Image from "next/image";
-import salesfloor from "../../public/salesfloor_img.png";
+
 import styles from "../../app/page.module.css";
 import { IconButton } from "@mui/material";
 import fourway from "../../public/WhatsApp Image 2023-06-01 at 23.03.56.jpeg";
