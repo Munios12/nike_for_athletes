@@ -48,8 +48,12 @@
 }
 
 .show {
+  padding: 20px;
+  display: flex;
   border: 1px solid black;
-  display: block;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   min-height: 300px;
   width: 500px;
   background-color: bisque;
