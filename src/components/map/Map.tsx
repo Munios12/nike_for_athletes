@@ -6,6 +6,9 @@ import styles from "../../../app/page.module.css";
 import { IconButton } from "@mui/material";
 import { BUTTONS_DATA } from "@/src/constants/buttonsData";
 import { InfoCard } from "../infoCard/InfoCard";
+import fourwayIMG from "../../../public/WhatsApp Image 2023-06-01 at 23.03.56.jpeg";
+import workhorstIMG from "../../../public/workhorst.jpg";
+import single from "../../../public/singleMuro.jpg";
 
 const Map = () => {
   const [openWindowFW, setOpenWindowFW] = useState(false);
@@ -58,9 +61,21 @@ const Map = () => {
             );
           })}
 
-          <InfoCard data={BUTTONS_DATA[0]} className={buttonClassFW} />
-          <InfoCard data={BUTTONS_DATA[1]} className={buttonClassWH} />
-          <InfoCard data={BUTTONS_DATA[2]} className={buttonClassSing} />
+          <InfoCard
+            data={BUTTONS_DATA[0]}
+            className={buttonClassFW}
+            img={fourwayIMG}
+          />
+          <InfoCard
+            data={BUTTONS_DATA[1]}
+            className={buttonClassWH}
+            img={workhorstIMG}
+          />
+          <InfoCard
+            data={BUTTONS_DATA[2]}
+            className={buttonClassSing}
+            img={single}
+          />
         </div>
       </div>
     </main>

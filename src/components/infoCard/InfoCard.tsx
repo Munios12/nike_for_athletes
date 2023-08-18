@@ -5,15 +5,17 @@ import styles from "../../../app/page.module.css";
 export const InfoCard = ({
   data,
   className,
+  img,
 }: {
   data: any;
   className: any;
+  img: any;
 }) => {
   return (
     <>
       <div className={className} id={data.title}>
         <Image
-          src={data.image}
+          src={img}
           alt={data.title}
           width={200}
           height={200}
