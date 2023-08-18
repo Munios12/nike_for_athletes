@@ -7,52 +7,44 @@
   justify-content: baseline;
   gap: 20px;
   width: 100%;
+  height: 100vh;
 }
 
 .salesfloor_page {
-  width: 100%;
-  height: 1000px;
+  position: relative;
+  width: 900px;
+  height: 600px;
   border: 2px solid rgb(64, 3, 90);
   position: relative;
-  background-color: darksalmon;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-  background-image: url("/salesfloor_img.png");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: rgb(254, 254, 254);
 }
-
-/* .prueba_img {
+.salesfloor_container {
   width: 100%;
   height: 100%;
-  background-position: center;
+  background-image: url("/salesfloor_img.png");
   background-repeat: no-repeat;
-  background-color: rgb(226, 221, 88);
-  background-image: url("../../nike-training-v2/public/salesfloor_img.png");
-} */
-
+  background-size: contain;
+  background-position: center;
+}
 .icon {
   color: rgb(97, 6, 172);
 }
 
 .button {
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
   width: 50px;
   height: 50px;
   left: 54rem;
   top: 26rem;
-  /* left: calc(60% - 2rem); */
-  /* top: calc(100vh - 20rem); */
 }
 
 .hidden {
   display: none;
-  min-height: 300px;
+  /* min-height: 300px;
   width: 500px;
   background-color: bisque;
-  z-index: 1;
+  z-index: 1; */
 }
 
 .show {
@@ -67,11 +59,3 @@
   width: 500px;
   height: 500px;
 }
-
-/* @media (width >= 1500px) {
-  .fourway {
-    position: absolute;
-    left: 640px;
-    top: 270px;
-  }
-} */
