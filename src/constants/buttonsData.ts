@@ -22,7 +22,7 @@ export const BUTTONS_DATA: IButtonData[] = [
   {
     title: "Single",
     description: "Outfit 2 del Single",
-    image: "/../public/singleMuro.jpg",
+    image: "/../public/singleMuro2.jpg",
     position: { top: 20, left: 20 },
     class: "buttonClassSing",
   },

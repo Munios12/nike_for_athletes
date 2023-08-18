@@ -6,9 +6,9 @@ import styles from "../../../app/page.module.css";
 import { IconButton } from "@mui/material";
 import { BUTTONS_DATA } from "@/src/constants/buttonsData";
 import { InfoCard } from "../infoCard/InfoCard";
-import fourwayIMG from "../../../public/WhatsApp Image 2023-06-01 at 23.03.56.jpeg";
-import workhorstIMG from "../../../public/workhorst.jpg";
-import single from "../../../public/singleMuro.jpg";
+import fourwayIMG from "../../../public/FW2.jpg";
+import workhorstIMG from "../../../public/workhorst2.jpg";
+import single from "../../../public/singleMuro2.jpg";
 
 const Map = () => {
   const [openWindowFW, setOpenWindowFW] = useState(false);
