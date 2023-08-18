@@ -17,8 +17,8 @@ export const InfoCard = ({
         <Image
           src={img}
           alt={data.title}
-          width={200}
-          height={200}
+          // width={200}
+          // height={200}
           className={styles.fwimg}
         />
         <h5>{data.title}</h5>
