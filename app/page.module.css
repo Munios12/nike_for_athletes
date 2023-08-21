@@ -1,5 +1,5 @@
 .main {
-  background-color: rgb(228, 216, 216);
+  background-color: rgb(255, 255, 255);
   padding: 30px;
   display: flex;
   align-items: center;
@@ -14,7 +14,7 @@
   position: relative;
   width: 900px;
   height: 600px;
-  border: 2px solid rgb(64, 3, 90);
+  border: 2px solid rgb(23, 0, 33);
   position: relative;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
@@ -29,7 +29,7 @@
   background-position: center;
 }
 .icon {
-  color: rgb(97, 6, 172);
+  color: rgb(116, 19, 165);
 }
 
 .button {
@@ -47,7 +47,7 @@
   z-index: 1; */
 }
 
-.show {
+/* .show {
   padding: 20px;
   display: flex;
   border: 1px solid black;
@@ -58,9 +58,58 @@
   width: 500px;
   background-color: bisque;
   z-index: 1;
-}
+} */
 
 .fwimg {
   width: 450px;
   height: 500px;
+}
+
+.fwshow {
+  position: absolute;
+  top: -40px;
+  left: 10px;
+  padding: 20px;
+  border-radius: 10px;
+  /* border: 1px solid black; */
+  min-height: 300px;
+  width: 500px;
+  background-color: rgb(243, 243, 243);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  z-index: 2;
+}
+
+.whshow {
+  padding: 20px;
+  position: absolute;
+  /* border: 1px solid black; */
+  border-radius: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
+  width: 500px;
+  background-color: rgb(243, 243, 243);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  z-index: 1;
+}
+
+.singshow {
+  padding: 20px;
+  position: absolute;
+  top: -40px;
+  left: 300px;
+  border-radius: 10px;
+  /* border: 1px solid black; */
+  min-height: 300px;
+  width: 500px;
+  background-color: rgb(243, 243, 243);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  z-index: 1;
 }
