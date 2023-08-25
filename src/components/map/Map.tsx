@@ -40,7 +40,6 @@ const Map = () => {
   return (
     <main className={styles.salesfloor_page}>
       <div className={styles.salesfloor_container}>
-        {/* <div className={styles.fourway}> */}
         {BUTTONS_DATA.map((buttonData) => {
           if (buttonData.title === "fourway") {
           }
@@ -77,7 +76,6 @@ const Map = () => {
           img={single}
         />
       </div>
-      {/* </div> */}
     </main>
   );
 };

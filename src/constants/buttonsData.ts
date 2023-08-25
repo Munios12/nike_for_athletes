@@ -21,9 +21,16 @@ export const BUTTONS_DATA: IButtonData[] = [
   },
   {
     title: "Single",
-    description: "Maximo 4 SKUs, hablar del máximo de units por modelo...",
+    description: "Maximo 4 SKUs, hablar del máximo de units por modelo, ",
     image: "/../public/singleMuro2.jpg",
     position: { top: 270, left: 240 },
+    class: "buttonClassSing",
+  },
+  {
+    title: "Mannequin Statement",
+    description: "Maximo 4 SKUs, hablar del máximo de units por modelo, ",
+    image: "/../public/singleMuro2.jpg",
+    position: { top: 270, left: 600 },
     class: "buttonClassSing",
   },
 ];

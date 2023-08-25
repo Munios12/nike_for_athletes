@@ -4,6 +4,11 @@
   margin: 0;
 }
 
+@font-face {
+  src: url("../public/fonts/Helvetica/HelveticaNowText-Light.ttf");
+  font-family: "Helvetica Now Text";
+}
+
 /* html,
 body {
   overflow-x: hidden;
@@ -17,4 +22,16 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+h5,
+p {
+  font-family: "Helvetica Now Text";
+  font-size: 1rem;
+}
+
+h2 {
+  font-family: "Helvetica Now Text";
+  font-size: 1.5rem;
+  font-weight: 800;
 }
