@@ -25,7 +25,6 @@
 }
 
 .salesfloor_page {
-  position: relative;
   width: 900px;
   height: 600px;
   /* border: 2px solid rgb(23, 0, 33); */
@@ -37,57 +36,41 @@
 .salesfloor_container {
   width: 100%;
   height: 100%;
-  background-image: url("/salesfloor_img.png");
+  background-image: url("/salesfloor_simple_copy.svg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
 }
 .icon {
-  color: rgb(94, 3, 67);
+  color: #111111;
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
 .button {
-  width: 50px;
-  height: 50px;
-  left: 54rem;
-  top: 26rem;
+  width: 3rem;
+  height: 3rem;
 }
 
 .hidden {
   display: none;
-  /* min-height: 300px;
-  width: 500px;
-  background-color: bisque;
-  z-index: 1; */
 }
 
-/* .show {
-  padding: 20px;
-  display: flex;
-  border: 1px solid black;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 300px;
-  width: 500px;
-  background-color: bisque;
-  z-index: 1;
-} */
-
 .fwimg {
-  width: 450px;
+  width: 500px;
   height: 500px;
 }
 
 .fwshow {
+  display: flex;
+  flex-direction: row;
   position: absolute;
   top: -40px;
-  left: 10px;
+  left: -190px;
   padding: 20px;
   border-radius: 7px;
-  /* border: 1px solid black; */
   min-height: 300px;
-  width: 500px;
+  width: 700px;
   background-color: rgb(243, 243, 243);
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
     rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
@@ -112,7 +95,9 @@
     rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
     rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   z-index: 1;
-  animation: fade-in-bottom 0.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+
+  -webkit-animation: fade-in-left 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in-left 0.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
 .singshow {
@@ -120,6 +105,23 @@
   position: absolute;
   top: -40px;
   left: 300px;
+  border-radius: 7px;
+  /* border: 1px solid black; */
+  min-height: 300px;
+  width: 500px;
+  background-color: rgb(243, 243, 243);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  z-index: 1;
+  animation: fade-in-bottom 0.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+.mannequinshow {
+  padding: 20px;
+  position: absolute;
+  top: -50px;
+  left: 420px;
   border-radius: 7px;
   /* border: 1px solid black; */
   min-height: 300px;
@@ -141,5 +143,82 @@
   100% {
     transform: translateY(0);
     opacity: 1;
+  }
+}
+
+@-webkit-keyframes fade-in-left {
+  0% {
+    -webkit-transform: translateX(-50px);
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes fade-in-left {
+  0% {
+    -webkit-transform: translateX(-50px);
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* INFOCARD TEXT--------------------------------------------
+
+*/
+
+.infoCardText {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: justify;
+}
+
+.infoCardText h5 {
+  margin-bottom: 10px;
+}
+
+/* Media-Querys--------------------------------------------
+
+*/
+
+@media (width >= 4400px) {
+  .main {
+    background-color: rgb(179, 93, 93);
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: baseline;
+    gap: 20px;
+    width: 100%;
+    height: 100vh;
+  }
+
+  .salesfloor_page {
+    width: 1800px;
+    height: 1200px;
+    position: relative;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+      rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    background-color: rgb(254, 254, 254);
+  }
+  .salesfloor_container {
+    width: 100%;
+    height: 100%;
+    background-image: url("/salesfloor_simple_copy.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
   }
 }

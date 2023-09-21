@@ -20,8 +20,10 @@ export const InfoCard = ({
         // height={200}
         className={styles.fwimg}
       />
-      <h5>{data.title}</h5>
-      <p>{data.description}</p>
+      <div className={styles.infoCardText}>
+        <h5>{data.title}</h5>
+        <p>{data.description}</p>
+      </div>
     </div>
   );
 };

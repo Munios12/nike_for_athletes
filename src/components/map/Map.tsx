@@ -9,31 +9,44 @@ import { InfoCard } from "../infoCard/InfoCard";
 import fourwayIMG from "../../../public/FW2.jpg";
 import workhorstIMG from "../../../public/workhorst2.jpg";
 import single from "../../../public/singleMuro2.jpg";
+import mannequin from "../../../public/mannequin.jpg";
 
 const Map = () => {
   const [openWindowFW, setOpenWindowFW] = useState(false);
   const [openWindowWH, setOpenWindowWH] = useState(false);
   const [openWindowSing, setOpenWindowSing] = useState(false);
+  const [openWindowMannequin, setOpenWindowMannequin] = useState(false);
 
   const buttonClassFW = openWindowFW ? `${styles.fwshow}` : `${styles.hidden}`;
   const buttonClassWH = openWindowWH ? `${styles.whshow}` : `${styles.hidden}`;
   const buttonClassSing = openWindowSing
     ? `${styles.singshow}`
     : `${styles.hidden}`;
+  const buttonClassMannequin = openWindowMannequin
+    ? `${styles.mannequinshow}`
+    : `${styles.hidden}`;
 
   const showOpenWindow = (item: string) => {
     if (item === "Fourway") {
       setOpenWindowWH(false);
       setOpenWindowSing(false);
+      setOpenWindowMannequin(false);
       setOpenWindowFW(!openWindowFW);
     } else if (item === "Workhorst") {
       setOpenWindowFW(false);
       setOpenWindowSing(false);
+      setOpenWindowMannequin(false);
       setOpenWindowWH(!openWindowWH);
     } else if (item === "Single") {
       setOpenWindowFW(false);
       setOpenWindowWH(false);
+      setOpenWindowMannequin(false);
       setOpenWindowSing(!openWindowSing);
+    } else if (item === "MannequinSt") {
+      setOpenWindowFW(false);
+      setOpenWindowWH(false);
+      setOpenWindowSing(false);
+      setOpenWindowMannequin(!openWindowMannequin);
     }
   };
 
@@ -74,6 +87,11 @@ const Map = () => {
           data={BUTTONS_DATA[2]}
           className={buttonClassSing}
           img={single}
+        />
+        <InfoCard
+          data={BUTTONS_DATA[3]}
+          className={buttonClassMannequin}
+          img={mannequin}
         />
       </div>
     </main>
