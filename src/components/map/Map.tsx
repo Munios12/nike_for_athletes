@@ -89,17 +89,23 @@ const Map = () => {
           data={BUTTONS_DATA[1]}
           className={buttonClassWH}
           img={workhorstIMG}
-        />
+        >
+          <h5>Capacity</h5>
+        </InfoCard>
         <InfoCard
           data={BUTTONS_DATA[2]}
           className={buttonClassSing}
           img={single}
-        />
+        >
+          <h5>Capacity</h5>
+        </InfoCard>
         <InfoCard
           data={BUTTONS_DATA[3]}
           className={buttonClassMannequin}
           img={mannequin}
-        />
+        >
+          <h5>Capacity</h5>
+        </InfoCard>
       </div>
     </main>
   );
