@@ -1,0 +1,13 @@
+.navbar {
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 500px;
+  display: flex;
+  /* border: 1px solid saddlebrown; */
+}
+
+.logo {
+  width: 60px;
+  height: 20px;
+}

@@ -6,23 +6,20 @@ export const InfoCard = ({
   data,
   className,
   img,
+  children,
 }: {
   data: any;
   className: any;
   img: any;
+  children: JSX.Element;
 }) => {
   return (
     <div className={className} id={data.title}>
-      <Image
-        src={img}
-        alt={data.title}
-        // width={200}
-        // height={200}
-        className={styles.fwimg}
-      />
+      <Image src={img} alt={data.title} className={styles.fwimg} />
       <div className={styles.infoCardText}>
         <h5>{data.title}</h5>
         <p>{data.description}</p>
+        {children}
       </div>
     </div>
   );

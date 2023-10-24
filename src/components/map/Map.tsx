@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import AddCircleIcon from "@mui/icons-material/AddCircle";
 
-import styles from "../../../app/page.module.css";
+import styles from "./Map.module.css";
 import { IconButton } from "@mui/material";
 import { BUTTONS_DATA } from "@/src/constants/buttonsData";
 import { InfoCard } from "../infoCard/InfoCard";
@@ -77,7 +77,14 @@ const Map = () => {
           data={BUTTONS_DATA[0]}
           className={buttonClassFW}
           img={fourwayIMG}
-        />
+        >
+          <div className={styles.capacity}>
+            <h5>Capacity</h5>
+            <p>Camisetas: 15u</p>
+            <p>Suaderas y chaquetas: 8u</p>
+            <p>Pantalón: 12u</p>
+          </div>
+        </InfoCard>
         <InfoCard
           data={BUTTONS_DATA[1]}
           className={buttonClassWH}
