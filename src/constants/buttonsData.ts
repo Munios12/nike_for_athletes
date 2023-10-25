@@ -15,7 +15,7 @@ export const BUTTONS_DATA: IButtonData[] = [
   {
     title: "Workhorst",
     description:
-      "En este mueble trabajaremos el high capacity (cuando tenemos mucho producto) y el low capacity (tenemos poco producto). En el primer escenario colocaremos una D-Bar para colocar 2 SKUs (dos modelos), en el caso que no tenemos producto ponemos un Face-Out (el pincho donde se encuentra la camiseta azul), donde solo cabe un SKU.",
+      "En este mueble trabajaremos el high capacity (cuando tenemos mucho producto) y el low capacity (tenemos poco producto). En el primer escenario colocaremos una D-Bar para colocar 2 SKUs (dos modelos), en el caso que tengamos poco producto ponemos un Face-Out (el pincho donde se encuentra {X}), donde solo cabe un SKU.",
     image: "/../public/workhorst3.jpg",
     position: { top: 400, left: 520 },
     class: "buttonClassWH",
