@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { createRef, useEffect, useRef, useState } from "react";
 import AddCircleIcon from "@mui/icons-material/AddCircle";
 
 import styles from "./Map.module.css";
@@ -7,15 +7,17 @@ import { IconButton } from "@mui/material";
 import { BUTTONS_DATA } from "@/src/constants/buttonsData";
 import { InfoCard } from "../infoCard/InfoCard";
 import fourwayIMG from "../../../public/FW2.jpg";
-import workhorstIMG from "../../../public/workhorst2.jpg";
+import workhorstIMG from "../../../public/workhorst3.jpeg";
 import single from "../../../public/singleMuro2.jpg";
 import mannequin from "../../../public/mannequin.jpg";
+import rounder from "../../../public/Rounder.jpg";
 
 const Map = () => {
   const [openWindowFW, setOpenWindowFW] = useState(false);
   const [openWindowWH, setOpenWindowWH] = useState(false);
   const [openWindowSing, setOpenWindowSing] = useState(false);
   const [openWindowMannequin, setOpenWindowMannequin] = useState(false);
+  const [openWindowRounder, setOpenWindowRounder] = useState(false);
 
   const buttonClassFW = openWindowFW ? `${styles.fwshow}` : `${styles.hidden}`;
   const buttonClassWH = openWindowWH ? `${styles.whshow}` : `${styles.hidden}`;
@@ -24,6 +26,9 @@ const Map = () => {
     : `${styles.hidden}`;
   const buttonClassMannequin = openWindowMannequin
     ? `${styles.mannequinshow}`
+    : `${styles.hidden}`;
+  const buttonClassRounder = openWindowRounder
+    ? `${styles.roundershow}`
     : `${styles.hidden}`;
 
   const showOpenWindow = (item: string) => {
@@ -47,6 +52,12 @@ const Map = () => {
       setOpenWindowWH(false);
       setOpenWindowSing(false);
       setOpenWindowMannequin(!openWindowMannequin);
+    } else if (item === "Rounder") {
+      setOpenWindowFW(false);
+      setOpenWindowWH(false);
+      setOpenWindowSing(false);
+      setOpenWindowMannequin(false);
+      setOpenWindowRounder(!openWindowRounder);
     }
   };
 
@@ -90,22 +101,28 @@ const Map = () => {
           className={buttonClassWH}
           img={workhorstIMG}
         >
-          <h5>Capacity</h5>
+          <div className={styles.capacity}>
+            <h5>Capacity</h5>
+            <p>Camisetas: 15u en faceout, 12u en dbar</p>
+            <p>Suaderas y chaquetas: 8u en dbar</p>
+            <p>Pantalón: 12u</p>
+          </div>
         </InfoCard>
         <InfoCard
           data={BUTTONS_DATA[2]}
           className={buttonClassSing}
           img={single}
-        >
-          <h5>Capacity</h5>
-        </InfoCard>
+        />
         <InfoCard
           data={BUTTONS_DATA[3]}
           className={buttonClassMannequin}
           img={mannequin}
-        >
-          <h5>Capacity</h5>
-        </InfoCard>
+        />
+        <InfoCard
+          data={BUTTONS_DATA[4]}
+          className={buttonClassRounder}
+          img={rounder}
+        />
       </div>
     </main>
   );

@@ -46,7 +46,7 @@
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
     rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
     rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-  z-index: 2;
+  /* z-index: 2; */
   animation: fade-in-bottom 0.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
@@ -64,7 +64,7 @@
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
     rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
     rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-  z-index: 1;
+  /* z-index: 1; */
 
   -webkit-animation: fade-in-left 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
   animation: fade-in-left 0.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
@@ -73,18 +73,17 @@
 .singshow {
   display: flex;
   flex-direction: row;
-  padding: 20px;
   position: absolute;
   top: -40px;
   left: 300px;
+  padding: 20px;
   border-radius: 7px;
   min-height: 300px;
-  width: 700px;
+  width: 800px;
   background-color: rgb(243, 243, 243);
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
     rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
     rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-  z-index: 1;
   animation: fade-in-bottom 0.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
@@ -107,14 +106,35 @@
   animation: fade-in-bottom 0.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
+.roundershow {
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  position: absolute;
+  top: 0px;
+  left: -80px;
+  border-radius: 7px;
+  min-height: 300px;
+  width: 700px;
+  background-color: rgb(243, 243, 243);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  z-index: 1;
+  animation: fade-in-bottom 0.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
 /* Capacity Styles-------------------------------------------------------------------------*/
 
 .capacity {
   display: flex;
   flex-direction: column;
-  align-items: baseline;
   width: 100%;
   margin-top: 40px;
+}
+
+.capacity > p {
+  font-size: 0.8rem;
 }
 
 /* ANIMACION ----------------------------------------------------------------------*/
