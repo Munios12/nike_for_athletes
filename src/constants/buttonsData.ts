@@ -31,7 +31,7 @@ export const BUTTONS_DATA: IButtonData[] = [
   {
     title: "MannequinSt",
     description:
-      "Punto estrategico en la tienda ya que el cliente busca outfits fijandose en los manis, los SKUs deben estar proximos a ellos. Los cambiamos durante las aperturas representando SKUs implantados. Utilizamos complementos de equipment (EQ) para hacer los outfits mas realistas. A poder ser utilizamos prendas de temporada y seguimos con el colorflow de la tienda. ",
+      "Punto estrategico en la tienda ya que el cliente busca outfits fijandose en los manis, los SKUs deben estar proximos a ellos. Los cambiamos durante las aperturas representando SKUs implantados. Utilizamos complementos de equipment (EQ) para hacer los outfits mas realistas. A poder ser utilizamos prendas de temporada y seguimos con el colorflow de la tienda. Intenamos siempre poner la ropa recien planchada ",
     image: "/../public/singleMuro2.jpg",
     position: { top: 340, left: 360 },
     class: "buttonClassMannequin",
