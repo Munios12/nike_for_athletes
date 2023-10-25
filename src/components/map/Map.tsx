@@ -18,19 +18,6 @@ const Map = () => {
   const [openWindowSing, setOpenWindowSing] = useState(false);
   const [openWindowMannequin, setOpenWindowMannequin] = useState(false);
   const [openWindowRounder, setOpenWindowRounder] = useState(false);
-
-  const buttonClassFW = openWindowFW ? `${styles.fwshow}` : `${styles.hidden}`;
-  const buttonClassWH = openWindowWH ? `${styles.whshow}` : `${styles.hidden}`;
-  const buttonClassSing = openWindowSing
-    ? `${styles.singshow}`
-    : `${styles.hidden}`;
-  const buttonClassMannequin = openWindowMannequin
-    ? `${styles.mannequinshow}`
-    : `${styles.hidden}`;
-  const buttonClassRounder = openWindowRounder
-    ? `${styles.roundershow}`
-    : `${styles.hidden}`;
-
   const showOpenWindow = (item: string) => {
     if (item === "Fourway") {
       setOpenWindowWH(false);
@@ -86,7 +73,7 @@ const Map = () => {
 
         <InfoCard
           data={BUTTONS_DATA[0]}
-          className={buttonClassFW}
+          className={openWindowFW ? `${styles.fwshow}` : `${styles.hidden}`}
           img={fourwayIMG}
         >
           <div className={styles.capacity}>
@@ -98,7 +85,7 @@ const Map = () => {
         </InfoCard>
         <InfoCard
           data={BUTTONS_DATA[1]}
-          className={buttonClassWH}
+          className={openWindowWH ? `${styles.whshow}` : `${styles.hidden}`}
           img={workhorstIMG}
         >
           <div className={styles.capacity}>
@@ -110,17 +97,21 @@ const Map = () => {
         </InfoCard>
         <InfoCard
           data={BUTTONS_DATA[2]}
-          className={buttonClassSing}
+          className={openWindowSing ? `${styles.singshow}` : `${styles.hidden}`}
           img={single}
         />
         <InfoCard
           data={BUTTONS_DATA[3]}
-          className={buttonClassMannequin}
+          className={
+            openWindowMannequin ? `${styles.mannequinshow}` : `${styles.hidden}`
+          }
           img={mannequin}
         />
         <InfoCard
           data={BUTTONS_DATA[4]}
-          className={buttonClassRounder}
+          className={
+            openWindowRounder ? `${styles.roundershow}` : `${styles.hidden}`
+          }
           img={rounder}
         />
       </div>
