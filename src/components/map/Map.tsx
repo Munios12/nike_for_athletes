@@ -18,6 +18,35 @@ const Map = () => {
   const [openWindowSing, setOpenWindowSing] = useState(false);
   const [openWindowMannequin, setOpenWindowMannequin] = useState(false);
   const [openWindowRounder, setOpenWindowRounder] = useState(false);
+
+  let fwRef: any = useRef();
+  let whRef: any = useRef();
+  let singRef: any = useRef();
+  let manRef: any = useRef();
+  let rounRef: any = useRef();
+
+  useEffect(() => {
+    let handler = (e: any) => {
+      if (!fwRef.current.contains(e.target)) {
+        setOpenWindowFW(false);
+      }
+
+      if (!whRef.current.contains(e.target)) {
+        setOpenWindowWH(false);
+      }
+      if (!singRef.current.contains(e.target)) {
+        setOpenWindowSing(false);
+      }
+      if (!manRef.current.contains(e.target)) {
+        setOpenWindowMannequin(false);
+      }
+      if (!rounRef.current.contains(e.target)) {
+        setOpenWindowRounder(false);
+      }
+    };
+    document.addEventListener("mousedown", handler);
+  });
+
   const showOpenWindow = (item: string) => {
     if (item === "Fourway") {
       setOpenWindowWH(false);
@@ -75,6 +104,7 @@ const Map = () => {
           data={BUTTONS_DATA[0]}
           className={openWindowFW ? `${styles.fwshow}` : `${styles.hidden}`}
           img={fourwayIMG}
+          reference={fwRef}
         >
           <div className={styles.capacity}>
             <h5>Capacity</h5>
@@ -87,6 +117,7 @@ const Map = () => {
           data={BUTTONS_DATA[1]}
           className={openWindowWH ? `${styles.whshow}` : `${styles.hidden}`}
           img={workhorstIMG}
+          reference={whRef}
         >
           <div className={styles.capacity}>
             <h5>Capacity</h5>
@@ -99,6 +130,7 @@ const Map = () => {
           data={BUTTONS_DATA[2]}
           className={openWindowSing ? `${styles.singshow}` : `${styles.hidden}`}
           img={single}
+          reference={singRef}
         />
         <InfoCard
           data={BUTTONS_DATA[3]}
@@ -106,6 +138,7 @@ const Map = () => {
             openWindowMannequin ? `${styles.mannequinshow}` : `${styles.hidden}`
           }
           img={mannequin}
+          reference={manRef}
         />
         <InfoCard
           data={BUTTONS_DATA[4]}
@@ -113,6 +146,7 @@ const Map = () => {
             openWindowRounder ? `${styles.roundershow}` : `${styles.hidden}`
           }
           img={rounder}
+          reference={rounRef}
         />
       </div>
     </main>
